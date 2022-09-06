@@ -1,0 +1,33 @@
+{
+  "behaviors": [
+    {
+      "name": "mPulse",
+      "options": {
+        "apiKey": "xxxxxHBQT7-8SL67",
+        "bufferSize": "",
+        "configOverride": "",
+        "enabled": true,
+        "loaderVersion": "V10",
+        "requirePci": false,
+        "titleOptional": ""
+      }
+    }
+  ],
+  "criteria": [
+    {
+      "name": "userLocation",
+      "options": {
+        "checkIps": "BOTH",
+        "countryValues": [
+          "AU"
+        ],
+        "field": "COUNTRY",
+        "matchOperator": "IS_NOT_ONE_OF",
+        "useOnlyFirstXForwardedForIp": false
+      }
+    }
+  ],
+  "name": "mPulse",
+  "options": {},
+  "criteriaMustSatisfy": "all"
+}

@@ -1,0 +1,98 @@
+{
+  "rules": {
+    "name": "default",
+    "behaviors": [
+      {
+        "name": "origin",
+        "options": {
+          "cacheKeyHostname": "ORIGIN_HOSTNAME",
+          "compress": true,
+          "enableTrueClientIp": false,
+          "forwardHostHeader": "REQUEST_HOST_HEADER",
+          "hostname": "<putOriginHostnameHere>",
+          "httpPort": 80,
+          "httpsPort": 443,
+          "originCertificate": "",
+          "originSni": true,
+          "originType": "CUSTOMER",
+          "ports": "",
+          "verificationMode": "PLATFORM_SETTINGS"
+        }
+      },
+      {
+        "name": "cpCode",
+        "options": {
+          "value": {
+            "cpCodeLimits": {
+              "currentCapacity": 1634,
+              "limit": 3574,
+              "limitType": "account"
+            },
+            "createdDate": 1597568154000,
+            "description": "djha",
+            "id": 1077994,
+            "name": "djha",
+            "products": [
+              "Site_Accel"
+            ]
+          }
+        }
+      },
+      {
+        "name": "caching",
+        "options": {
+          "behavior": "NO_STORE"
+        }
+      },
+      {
+        "name": "sureRoute",
+        "options": {
+          "enabled": false,
+          "srDownloadLinkTitle": ""
+        }
+      },
+      {
+        "name": "tieredDistribution",
+        "options": {
+          "enabled": true,
+          "tieredDistributionMap": "CH2"
+        }
+      },
+      {
+        "name": "prefetch",
+        "options": {
+          "enabled": true
+        }
+      },
+      {
+        "name": "allowPost",
+        "options": {
+          "allowWithoutContentLength": false,
+          "enabled": true
+        }
+      },
+      {
+        "name": "report",
+        "options": {
+          "logAcceptLanguage": false,
+          "logCookies": "OFF",
+          "logCustomLogField": false,
+          "logEdgeIP": false,
+          "logHost": false,
+          "logReferer": false,
+          "logUserAgent": true,
+          "logXForwardedFor": false
+        }
+      }
+    ],
+    "children": [
+      "#include:Content_Compression.json",
+      "#include:Static_Content.json",
+      "#include:Dynamic_Content.json",
+      "#include:Performance.json",
+      "#include:Racing_Content.json",
+      "#include:mPulse.json"
+    ],
+    "options": {}
+  }
+}

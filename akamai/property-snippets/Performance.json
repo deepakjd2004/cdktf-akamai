@@ -1,0 +1,20 @@
+{
+  "behaviors": [
+    {
+      "name": "allowTransferEncoding",
+      "options": {
+        "enabled": true
+      }
+    },
+    {
+      "name": "removeVary",
+      "options": {
+        "enabled": true
+      }
+    }
+  ],
+  "comments": "Improves the performance of delivering objects to end users. Behaviors in this rule are applied to all requests as appropriate.",
+  "name": "Performance",
+  "options": {},
+  "criteriaMustSatisfy": "all"
+}
